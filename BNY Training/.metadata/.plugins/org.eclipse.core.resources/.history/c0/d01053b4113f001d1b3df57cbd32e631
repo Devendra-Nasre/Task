@@ -1,0 +1,80 @@
+package com.bookmanagementsystem.main.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bookmanagementsystem.main.model.Book;
+import com.bookmanagementsystem.main.repository.BookRepository;
+
+@Service
+public class BookServiceImpl implements BookService 
+{
+	@Autowired
+	 BookRepository br;
+
+	@Override
+	public void saveBookData(Book b) throws Exception  
+	{
+		try
+		{
+			br.save(b);
+		}
+		catch(Exception e)
+		{
+			throw e;
+		}
+		 
+	}
+
+	@Override
+	public Iterable<Book> displaybook() 
+	{
+		try
+		{
+			return br.findAll();
+		}catch (Exception e)
+		{
+			System.out.println("Something is going wrong");
+		}
+		return null;
+		
+		
+	}
+
+	@Override
+	public void deleteBook(int bid) 
+	{
+		try
+		{
+		 br.deleteById(bid);
+		}
+		catch (Exception e)
+		{
+			System.out.println("Something is going wrong");
+		}
+	}
+
+	@Override
+	public Book modifyBookData(int id,Book b)  {
+		Book book = br.findById(id).orElse(null);
+		if(book!=null)
+		{
+			book.setBid(id);
+			book.setBname(b.getBname());
+			book.setAuthor(b.getAuthor());
+			book.setPrice(b.getPrice());
+			book.setPublisher(b.getPublisher());
+			return br.save(book);
+			
+		}
+		return null;
+		
+	}
+
+	
+
+	
+
+}

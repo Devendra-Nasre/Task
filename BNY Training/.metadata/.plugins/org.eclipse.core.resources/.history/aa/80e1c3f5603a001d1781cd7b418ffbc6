@@ -1,0 +1,38 @@
+package Day1;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test_Student {
+
+	public static void main(String[] args) {
+		
+		
+//		 Student s1=new Student(1,"Ravi",LocalDate.of(1995, 10, 10),LocalTime.of(10, 10),"50","60","40","35","45");
+//		    Student s2=new Student(2,"Ajay","04 January 1994","50","60","40","35","45");
+//		    Student s3=new Student(3,"Akash","02 May 1993","50","60","40","35","45");
+//		    Student s4=new Student(4,"Supriya","06 June 1992","50","60","40","35","45");
+//		    Student s5=new Student(5,"Aishwarya","07 April 1991","50","60","40","35","45");
+		    
+//		    List<Student> stulist= new ArrayList<>();
+//		    stulist.add(s1);
+//		    stulist.add(s2);
+//		    stulist.add(s3);
+//		    stulist.add(s4);
+//		    stulist.add(s5);
+//		    
+//		    System.out.println("Total Students :"+stulist.size());
+//		    /*
+//		     * for(Student s:stulist) { System.out.println(s); }
+//		     */
+//		    
+//		    stulist.stream().forEach(e-> System.out.println(e));
+//		    
+		// write a program to print list of students who is total marks are less than 40%.
+		    //stulist.stream().filter(e->e.getChemistry())
+		}
+		
+	
+}

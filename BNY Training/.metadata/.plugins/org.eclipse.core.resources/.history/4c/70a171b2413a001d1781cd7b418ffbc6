@@ -1,0 +1,66 @@
+package Day1;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+
+public class Even_Odd_ArmstrongNumber {
+
+
+
+	   public static void main(String[] args) {
+	        
+	        List<Integer> number=Arrays.asList(34,44,151,454);
+	         displayEvenNumber(number);
+	         displayOddNumber(number);
+	         List<Integer> list = displayArmstrongNumber(number);
+	         
+	         
+	    
+	         
+	    }
+
+
+
+	   private static List<Integer> displayArmstrongNumber(List<Integer> num) {
+		   List<Integer> list=null;
+		   for (Integer integer : num) {
+			
+			  return Stream.iterate(1, i -> ++i)
+               .filter(i -> i == Stream.of(String.valueOf(i).split(""))
+                       .map(Integer::valueOf)
+                       .map(n -> (n*n*n))
+                       .mapToInt(n->n)
+                       .sum())
+               .limit(integer)
+               .collect(Collectors.toList()));
+//	                    
+		   }
+		   System.out.println(list);
+		
+		   
+	        
+	    }
+
+
+
+	   private static void displayOddNumber(List<Integer> num) {
+	    Predicate<Integer> isEven=(number)->number %2==0;
+	      System.out.println("Even Number");
+	      num.stream().filter(isEven).forEach(System.out::println);
+	        
+	    }
+
+
+
+	   private static void displayEvenNumber(List<Integer> num) {
+	        Predicate<Integer> isOdd=(number)->number %2!=0;
+	          System.out.println("Odd Number");
+	          num.stream().filter(isOdd).forEach(System.out::println);
+	            
+	        
+	    }
+}

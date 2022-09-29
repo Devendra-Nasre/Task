@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;BookManagementSystem&apos;&#x0D;&#x0A;- Original project: &apos;BookManagementSystem&apos;&#x0D;&#x0A;- Original element: &apos;BookManagementSystem/src/main/java/ExceptionHandler&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;ExceptionHandler" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1664357509443" subPackages="false" version="1.0"/>
+</session>

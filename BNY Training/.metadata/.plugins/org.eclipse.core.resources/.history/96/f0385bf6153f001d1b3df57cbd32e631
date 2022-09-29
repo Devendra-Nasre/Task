@@ -1,0 +1,9 @@
+package com.bookmanagementsystem.main.Exception;
+
+public class NullBookException {
+
+	public NullBookException(String msg)
+	{
+		
+	}
+}

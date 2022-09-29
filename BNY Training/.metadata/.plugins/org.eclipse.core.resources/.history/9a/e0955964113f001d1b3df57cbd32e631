@@ -1,0 +1,16 @@
+package com.bookmanagementsystem.main.Exception;
+
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class ControllerException {
+
+	@ExceptionHandler(Exception.class)
+	public String sameIdException(Exception e)
+	{
+		return e.getMessage();
+		
+		
+	}
+}

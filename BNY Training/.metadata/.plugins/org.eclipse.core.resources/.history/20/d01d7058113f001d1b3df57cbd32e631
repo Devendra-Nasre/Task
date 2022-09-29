@@ -1,0 +1,5 @@
+package com.bookmanagementsystem.main.Exception;
+
+public class SameIdException {
+
+}

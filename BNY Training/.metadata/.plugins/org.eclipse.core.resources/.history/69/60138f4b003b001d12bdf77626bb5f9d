@@ -1,0 +1,36 @@
+package Day1;
+
+import java.util.Scanner;
+
+public class EmiCal {
+	
+
+//public static void main(String[] args) {
+//	Scanner sc=new Scanner(System.in);
+//	
+//	System.out.println("Principle Amount is:");
+//	Double P=sc.nextDouble();
+//	System.out.println("Rate  is:");
+//	Double R=sc.nextDouble();
+//	System.out.println("Time  is:");
+//	Double T=sc.nextDouble();
+//	
+//	double Emi = (P * (R/100) * Math.pow(1+(R/100),T)) / (Math.pow(1+(R/100),T)-1);
+//	System.out.println(Emi);
+	
+	public static void main(String[] args) {
+
+		Result r = new Result();
+		Calculate c;
+		double d = 0;
+		c = r.emiCalculation();
+
+		d = r.input(c, 1200, 10, 12, 1);
+
+		System.out.println(d);
+
+	}
+}
+
+
+}
